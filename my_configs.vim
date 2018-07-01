@@ -1,6 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
 set rtp+=~/.vim_runtime/my_plugins/ultisnips
 set rtp+=~/.vim_runtime/my_plugins/Vundle
 call vundle#begin()
@@ -8,15 +9,26 @@ Plugin 'VundleVim/Vundle'
 Bundle 'SirVer/ultisnips'
 Plugin 'tell-k/vim-autopep8'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'altercation/vim-colors-solarized'
 
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 
 
-"set pageup pagedown
-nnoremap ff <PageUp> 
-nnoremap F  <PageDown> 
+syntax enable
+colorscheme solarized
+let g:solarized_termcolors=256
+let g:solarized_termtrans=1
+if has('gui_running')
+    set background=light
+else
+    set background=dark
+endif
+" if filereadable(expand("~/.vimrc_background"))
+"     let base16colorspace=256
+"     source ~/.vimrc_background
+" endif
 
 
 " python
@@ -56,14 +68,14 @@ nmap <leader>g :YcmCompleter GoTo<CR>
 " nmap <leader>d :YcmCompleter GoToDefinition<CR>
 
 
-set nu
+" set nu
 set clipboard+=unnamed  " use the clipboards of vim and win
 " set paste               " Paste from a windows or from vim
 set go+=a               " Visual selection automatically copied to the clipboard
 
-vmap <C-c> "+yi
+map <C-c> "+y
 vmap <C-x> "+c
-vmap <C-v> c<ESC>"+p
+vmap <C-v> <ESC>"+p
 imap <C-v> <ESC>"+pa
 
 inoremap <silent><expr> ( complete_parameter#pre_complete("()")

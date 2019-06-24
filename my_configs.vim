@@ -3,13 +3,15 @@ filetype off                  " required
 
 
 set rtp+=~/.vim_runtime/my_plugins/ultisnips
-set rtp+=~/.vim_runtime/my_plugins/Vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle'
 Bundle 'SirVer/ultisnips'
 Plugin 'tell-k/vim-autopep8'
-Plugin 'jiangmiao/auto-pairs'
+" Plugin 'jiangmiao/auto-pairs'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tenfyzhong/CompleteParameter.vim'
 
 
 call vundle#end()            " required
@@ -42,8 +44,8 @@ set completeopt-=preview
 let g:ycm_global_ycm_extra_conf='~/.vim_runtime/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
 
-let g:ycm_python_binary_path = '/usr/bin/python3'
-" let g:ycm_python_binary_path = 'python'
+" let g:ycm_python_binary_path = '/usr/local/bin/python3'
+let g:ycm_python_binary_path = 'python'
 
 
 set conceallevel=2
@@ -89,8 +91,8 @@ imap <c-k> <Plug>(complete_parameter#goto_previous_parameter)
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
 let g:UltiSnipsExpandTrigger="<c-l>"
 " let g:UltiSnipsListSnippets="<c-h>"
-let g:UltiSnipsJumpForwardTrigger="<c-g>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
 let g:UltiSnipsUsePythonVersion = 3
 

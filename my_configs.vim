@@ -12,6 +12,7 @@ Plugin 'tell-k/vim-autopep8'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tenfyzhong/CompleteParameter.vim'
+Plugin 'jeaye/color_coded'
 
 
 call vundle#end()            " required

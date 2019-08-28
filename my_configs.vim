@@ -1,3 +1,8 @@
+" File              : my_configs.vim
+" Author            : joshzyjian <shasjian@gmail.com>
+" Date              : 28.08.2019
+" Last Modified Date: 28.08.2019
+" Last Modified By  : joshzyjian <shasjian@gmail.com>
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -11,8 +16,10 @@ Plugin 'tell-k/vim-autopep8'
 " Plugin 'jiangmiao/auto-pairs'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'rdnetto/YCM-Generator'
 Plugin 'tenfyzhong/CompleteParameter.vim'
 Plugin 'jeaye/color_coded'
+Plugin 'alpertuna/vim-header'
 
 
 call vundle#end()            " required
@@ -108,10 +115,15 @@ let g:multi_cursor_use_default_mapping=0
 
 " Default mapping
 let g:multi_cursor_start_word_key      = '<C-n>'
-let g:multi_cursor_select_all_word_key = '<s-n>'
+" let g:multi_cursor_select_all_word_key = '<s-n>'
 let g:multi_cursor_start_key           = 'g<C-n>'
 let g:multi_cursor_select_all_key      = 'g<A-n>'
 let g:multi_cursor_next_key            = '<C-n>'
 let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
+
+" add header
+let g:header_field_author = 'joshzyjian'
+let g:header_field_author_email = 'shasjian@gmail.com'
+let g:header_auto_add_header = 1
